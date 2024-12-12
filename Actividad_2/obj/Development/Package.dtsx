@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="85"
-  DTS:VersionGUID="{133FE534-E14A-4A48-90D8-8E33444735D6}">
+  DTS:VersionBuild="88"
+  DTS:VersionGUID="{91A171A8-3B7A-4E42-8216-043EA1F94CA3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -11565,7 +11565,7 @@
                   description="Nombre de la tabla de la base de datos de destino."
                   expressionType="Notify"
                   name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">[Dim_Tiempo_ST]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">[Dim_Tiempo]</property>
                 <property
                   dataType="System.Int32"
                   description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
@@ -11599,57 +11599,8 @@
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de ADO NET">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].Columns[fecha_pedido]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="fecha_pedido"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].ExternalColumns[fecha_pedido]"
-                      lineageId="Package\Transformacion_Tiempo\Merge Join.Outputs[Merge Join Output].Columns[fecha_pedido]" />
-                    <inputColumn
-                      refId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].Columns[Añio]"
-                      cachedDataType="i4"
-                      cachedName="Añio"
-                      externalMetadataColumnId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].ExternalColumns[Añio]"
-                      lineageId="Package\Transformacion_Tiempo\Merge Join.Outputs[Merge Join Output].Columns[Añio]" />
-                    <inputColumn
-                      refId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].Columns[Mes]"
-                      cachedDataType="i4"
-                      cachedName="Mes"
-                      externalMetadataColumnId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].ExternalColumns[Mes]"
-                      lineageId="Package\Transformacion_Tiempo\Merge Join.Outputs[Merge Join Output].Columns[Mes]" />
-                    <inputColumn
-                      refId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].Columns[Dia]"
-                      cachedDataType="i4"
-                      cachedName="Dia"
-                      externalMetadataColumnId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].ExternalColumns[Dia]"
-                      lineageId="Package\Transformacion_Tiempo\Merge Join.Outputs[Merge Join Output].Columns[Dia]" />
-                    <inputColumn
-                      refId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].Columns[Numero_Semana]"
-                      cachedDataType="i4"
-                      cachedName="Numero_Semana"
-                      externalMetadataColumnId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].ExternalColumns[Numero_Semana]"
-                      lineageId="Package\Transformacion_Tiempo\Merge Join.Outputs[Merge Join Output].Columns[Numero_Semana]" />
-                    <inputColumn
-                      refId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].Columns[Trimestre]"
-                      cachedDataType="i4"
-                      cachedName="Trimestre"
-                      externalMetadataColumnId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].ExternalColumns[Trimestre]"
-                      lineageId="Package\Transformacion_Tiempo\Merge Join.Outputs[Merge Join Output].Columns[Trimestre]" />
-                    <inputColumn
-                      refId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].Columns[Dia_Semana]"
-                      cachedDataType="i4"
-                      cachedName="Dia_Semana"
-                      externalMetadataColumnId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].ExternalColumns[Dia_Semana]"
-                      lineageId="Package\Transformacion_Tiempo\Merge Join.Outputs[Merge Join Output].Columns[Dia_Semana]" />
-                  </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].ExternalColumns[ID_Tiempo]"
-                      dataType="i4"
-                      name="ID_Tiempo" />
                     <externalMetadataColumn
                       refId="Package\Transformacion_Tiempo\Dim_Tiempo.Inputs[Entrada de destino de ADO NET].ExternalColumns[fecha_pedido]"
                       dataType="dbTimeStamp"
@@ -11941,7 +11892,7 @@
                   description="Nombre de la tabla de la base de datos de origen."
                   expressionType="Notify"
                   name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">[dbo].[Dim_Tiempo_ST]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">[dbo].[Dim_Tiempo]</property>
                 <property
                   dataType="System.Int32"
                   description="Especificar el modo de recuperar información de columnas externas"
@@ -11964,15 +11915,6 @@
                   refId="Package\Transformacion_Tiempo\Origen_DimTiempoST.Outputs[Salida de origen de ADO NET]"
                   name="Salida de origen de ADO NET">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\Transformacion_Tiempo\Origen_DimTiempoST.Outputs[Salida de origen de ADO NET].Columns[ID_Tiempo]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Transformacion_Tiempo\Origen_DimTiempoST.Outputs[Salida de origen de ADO NET].ExternalColumns[ID_Tiempo]"
-                      lineageId="Package\Transformacion_Tiempo\Origen_DimTiempoST.Outputs[Salida de origen de ADO NET].Columns[ID_Tiempo]"
-                      name="ID_Tiempo"
-                      truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Transformacion_Tiempo\Origen_DimTiempoST.Outputs[Salida de origen de ADO NET].Columns[fecha_pedido]"
                       dataType="dbTimeStamp"
@@ -12040,10 +11982,6 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Transformacion_Tiempo\Origen_DimTiempoST.Outputs[Salida de origen de ADO NET].ExternalColumns[ID_Tiempo]"
-                      dataType="i4"
-                      name="ID_Tiempo" />
-                    <externalMetadataColumn
                       refId="Package\Transformacion_Tiempo\Origen_DimTiempoST.Outputs[Salida de origen de ADO NET].ExternalColumns[fecha_pedido]"
                       dataType="dbTimeStamp"
                       name="fecha_pedido" />
@@ -12078,11 +12016,6 @@
                   isErrorOut="true"
                   name="Salida de error de origen de ADO NET">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\Transformacion_Tiempo\Origen_DimTiempoST.Outputs[Salida de error de origen de ADO NET].Columns[ID_Tiempo]"
-                      dataType="i4"
-                      lineageId="Package\Transformacion_Tiempo\Origen_DimTiempoST.Outputs[Salida de error de origen de ADO NET].Columns[ID_Tiempo]"
-                      name="ID_Tiempo" />
                     <outputColumn
                       refId="Package\Transformacion_Tiempo\Origen_DimTiempoST.Outputs[Salida de error de origen de ADO NET].Columns[fecha_pedido]"
                       dataType="dbTimeStamp"
@@ -12258,7 +12191,7 @@
                       refId="Package\Transformacion_Tiempo\Sort.Inputs[Sort Input].Columns[ID_Tiempo]"
                       cachedDataType="i4"
                       cachedName="ID_Tiempo"
-                      lineageId="Package\Transformacion_Tiempo\Origen_DimTiempoST.Outputs[Salida de origen de ADO NET].Columns[ID_Tiempo]">
+                      lineageId="Package\Transformacion_Tiempo\425:invalid">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -12402,7 +12335,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Transformacion_Tiempo\Origen_DimTiempoST.Outputs[Salida de origen de ADO NET].Columns[ID_Tiempo]}</property>
+                          name="SortColumnId">#{Package\Transformacion_Tiempo\425:invalid}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -12763,14 +12696,14 @@
               startId="Package\Transformacion_Tiempo\Conditional Split.Outputs[Registros_Nuevos]" />
             <path
               refId="Package\Transformacion_Tiempo.Paths[Salida de origen de ADO NET]"
-              endId="Package\Transformacion_Tiempo\Derived Column.Inputs[Derived Column Input]"
-              name="Salida de origen de ADO NET"
-              startId="Package\Transformacion_Tiempo\Origen_Tiempo.Outputs[Salida de origen de ADO NET]" />
-            <path
-              refId="Package\Transformacion_Tiempo.Paths[Salida de origen de ADO NET1]"
               endId="Package\Transformacion_Tiempo\Sort.Inputs[Sort Input]"
               name="Salida de origen de ADO NET"
               startId="Package\Transformacion_Tiempo\Origen_DimTiempoST.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\Transformacion_Tiempo.Paths[Salida de origen de ADO NET1]"
+              endId="Package\Transformacion_Tiempo\Derived Column.Inputs[Derived Column Input]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Transformacion_Tiempo\Origen_Tiempo.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Transformacion_Tiempo.Paths[Sort Output]"
               endId="Package\Transformacion_Tiempo\Merge Join.Inputs[Merge Join Left Input]"
@@ -12864,6 +12797,10 @@
           Size="203.2,41.6"
           Id="Package\Transformacion_Empleado"
           TopLeft="459.999974866709,453.266663514707" />
+        <NodeLayout
+          Size="214.4,41.6"
+          Id="Package\Transformacion_Mov_Ventas"
+          TopLeft="452.499975276491,539.066662918065" />
         <NodeLayout
           Size="198.4,41.6"
           Id="Package\Transformacion_Producto"
@@ -12982,36 +12919,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="214.4,41.6"
-          Id="Package\Transformacion_Mov_Ventas"
-          TopLeft="465.833307881323,535.599996275505" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 5]"
-          TopLeft="561.599974866709,494.866663514707">
+          TopLeft="560.6499750716,494.866663514707">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="11.4333330146145,40.7333327607976"
+              EndConnector="0,44.1999994033575"
               Start="0,0"
-              End="11.4333330146145,33.2333327607976">
+              End="0,36.6999994033575">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.3666663803988" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.3666663803988"
-                    Point2="0,20.3666663803988"
-                    Point3="4,20.3666663803988" />
-                  <mssgle:LineSegment
-                    End="7.4333330146145,20.3666663803988" />
-                  <mssgle:CubicBezierSegment
-                    Point1="7.4333330146145,20.3666663803988"
-                    Point2="11.4333330146145,20.3666663803988"
-                    Point3="11.4333330146145,24.3666663803988" />
-                  <mssgle:LineSegment
-                    End="11.4333330146145,33.2333327607976" />
+                    End="0,36.6999994033575" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13842,6 +13763,250 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\Transformacion_Mov_Ventas">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\Transformacion_Mov_Ventas\Origen_Transacciones"
+          TopLeft="222.999996677041,55.999999165535" />
+        <NodeLayout
+          Size="229.6,41.6"
+          Id="Package\Transformacion_Mov_Ventas\Destio_DIM_Movimiento_Ventas"
+          TopLeft="346.999994829297,582.999991312623" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Transformacion_Mov_Ventas\Derived Column"
+          TopLeft="237.499996542931,164.499997630715" />
+        <EdgeLayout
+          Id="Package\Transformacion_Mov_Ventas.Paths[Salida de origen de ADO NET]"
+          TopLeft="314.249996609986,97.599999165535">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66.8999984651805"
+              Start="0,0"
+              End="0,59.3999984651805">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.3999984651805" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\Transformacion_Mov_Ventas\Sort"
+          TopLeft="263.999996066093,261.999996095896" />
+        <NodeLayout
+          Size="225.6,41.6"
+          Id="Package\Transformacion_Mov_Ventas\Origen_DIM_Moviminto_Ventas"
+          TopLeft="502.999992504716,52.9999992102385" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Transformacion_Mov_Ventas\Sort 1"
+          TopLeft="558.999991670251,269.999995976687" />
+        <EdgeLayout
+          Id="Package\Transformacion_Mov_Ventas.Paths[Derived Column Output]"
+          TopLeft="313.349996304512,206.099997630715">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.8999984651804"
+              Start="0,0"
+              End="0,48.3999984651804">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.3999984651804" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Transformacion_Mov_Ventas.Paths[Salida de origen de ADO NET1]"
+          TopLeft="613.999992087483,94.5999992102385">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,175.399996766448"
+              Start="0,0"
+              End="0,167.899996766448">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,167.899996766448" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Transformacion_Mov_Ventas\Merge Join"
+          TopLeft="406.999993935227,375.999994397164" />
+        <EdgeLayout
+          Id="Package\Transformacion_Mov_Ventas.Paths[Sort Output]"
+          TopLeft="312.799996066093,303.599996095896">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="138.733331202467,72.3999983012677"
+              Start="0,0"
+              End="138.733331202467,64.8999983012677">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.9102428956294" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.9102428956294"
+                    Point2="0,42.9102428956294"
+                    Point3="4,42.9102428956294" />
+                  <mssgle:LineSegment
+                    End="134.733331202467,42.9102428956294" />
+                  <mssgle:CubicBezierSegment
+                    Point1="134.733331202467,42.9102428956294"
+                    Point2="138.733331202467,42.9102428956294"
+                    Point3="138.733331202467,46.9102428956294" />
+                  <mssgle:LineSegment
+                    End="138.733331202467,64.8999983012677" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Transformacion_Mov_Ventas.Paths[Sort Output1]"
+          TopLeft="612.199991670251,311.599995976687">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-120.133331068357,64.3999984204769"
+              Start="0,0"
+              End="-120.133331068357,56.8999984204769">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.1687795516485" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.1687795516485"
+                    Point2="0,38.1687795516485"
+                    Point3="-4,38.1687795516485" />
+                  <mssgle:LineSegment
+                    End="-116.133331068357,38.1687795516485" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-116.133331068357,38.1687795516485"
+                    Point2="-120.133331068357,38.1687795516485"
+                    Point3="-120.133331068357,42.1687795516485" />
+                  <mssgle:LineSegment
+                    End="-120.133331068357,56.8999984204769" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\Transformacion_Mov_Ventas\Conditional Split"
+          TopLeft="389.999994188547,465.999993056059" />
+        <EdgeLayout
+          Id="Package\Transformacion_Mov_Ventas.Paths[Merge Join Output]"
+          TopLeft="469.299994061887,417.599994397164">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.3999986588955"
+              Start="0,0"
+              End="0,40.8999986588955">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.8999986588955" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Transformacion_Mov_Ventas.Paths[Registro_Nuevo]"
+          TopLeft="464.299994508922,507.599993056059">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,75.3999982565639"
+              Start="0,0"
+              End="0,67.8999982565639">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.8999982565639" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-35.24203125,28.257616315782,70.4840625,11.384765625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transformacion_Mov_Ventas\Destio_DIM_Movimiento_Ventas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transformacion_Mov_Ventas\Origen_DIM_Moviminto_Ventas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transformacion_Mov_Ventas\Origen_Transacciones">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\Transformacion_Producto">
     <LayoutInfo>
       <GraphLayout
@@ -14123,52 +14288,6 @@
           Id="Package\Transformacion_Tiempo\Conditional Split"
           TopLeft="259.999985794227,409.066663822068" />
         <EdgeLayout
-          Id="Package\Transformacion_Tiempo.Paths[Salida de origen de ADO NET]"
-          TopLeft="179.966660975251,79.7333330681589">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.8666660097573"
-              Start="0,0"
-              End="0,45.3666660097573">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.3666660097573" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Transformacion_Tiempo.Paths[Registros_Nuevos]"
-          TopLeft="339.154152113717,450.666663822068">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,117.216665562275"
-              Start="0,0"
-              End="0,109.716665562275">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,109.716665562275" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-39.747578125,49.1659499686375,79.49515625,11.384765625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Transformacion_Tiempo.Paths[Merge Join Output]"
           TopLeft="334.133318945435,374.39999768575">
           <EdgeLayout.Curve>
@@ -14281,7 +14400,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Transformacion_Tiempo.Paths[Salida de origen de ADO NET1]"
+          Id="Package\Transformacion_Tiempo.Paths[Salida de origen de ADO NET]"
           TopLeft="503.133309657045,80.5999997287988">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14299,7 +14418,55 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,65.383332652317,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Transformacion_Tiempo.Paths[Salida de origen de ADO NET1]"
+          TopLeft="179.966660975251,79.7333330681589">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.8666660097571"
+              Start="0,0"
+              End="0,45.3666660097571">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.3666660097571" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Transformacion_Tiempo.Paths[Registros_Nuevos]"
+          TopLeft="339.154152113717,450.666663822068">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,117.216665562275"
+              Start="0,0"
+              End="0,109.716665562275">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,109.716665562275" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-39.747578125,49.1659499686375,79.49515625,11.384765625"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14323,250 +14490,6 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Transformacion_Tiempo\Dim_Tiempo">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Transformacion_Mov_Ventas">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\Transformacion_Mov_Ventas\Origen_Transacciones"
-          TopLeft="222.999996677041,55.999999165535" />
-        <NodeLayout
-          Size="229.6,41.6"
-          Id="Package\Transformacion_Mov_Ventas\Destio_DIM_Movimiento_Ventas"
-          TopLeft="346.999994829297,582.999991312623" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Transformacion_Mov_Ventas\Derived Column"
-          TopLeft="237.499996542931,164.499997630715" />
-        <EdgeLayout
-          Id="Package\Transformacion_Mov_Ventas.Paths[Salida de origen de ADO NET]"
-          TopLeft="314.249996609986,97.599999165535">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,66.8999984651805"
-              Start="0,0"
-              End="0,59.3999984651805">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.3999984651805" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Transformacion_Mov_Ventas\Sort"
-          TopLeft="263.999996066093,261.999996095896" />
-        <NodeLayout
-          Size="225.6,41.6"
-          Id="Package\Transformacion_Mov_Ventas\Origen_DIM_Moviminto_Ventas"
-          TopLeft="502.999992504716,52.9999992102385" />
-        <NodeLayout
-          Size="106.4,41.6"
-          Id="Package\Transformacion_Mov_Ventas\Sort 1"
-          TopLeft="558.999991670251,269.999995976687" />
-        <EdgeLayout
-          Id="Package\Transformacion_Mov_Ventas.Paths[Derived Column Output]"
-          TopLeft="313.349996304512,206.099997630715">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,55.8999984651804"
-              Start="0,0"
-              End="0,48.3999984651804">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.3999984651804" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Transformacion_Mov_Ventas.Paths[Salida de origen de ADO NET1]"
-          TopLeft="613.999992087483,94.5999992102385">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,175.399996766448"
-              Start="0,0"
-              End="0,167.899996766448">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,167.899996766448" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\Transformacion_Mov_Ventas\Merge Join"
-          TopLeft="406.999993935227,375.999994397164" />
-        <EdgeLayout
-          Id="Package\Transformacion_Mov_Ventas.Paths[Sort Output]"
-          TopLeft="312.799996066093,303.599996095896">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="138.733331202467,72.3999983012677"
-              Start="0,0"
-              End="138.733331202467,64.8999983012677">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.9102428956294" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,38.9102428956294"
-                    Point2="0,42.9102428956294"
-                    Point3="4,42.9102428956294" />
-                  <mssgle:LineSegment
-                    End="134.733331202467,42.9102428956294" />
-                  <mssgle:CubicBezierSegment
-                    Point1="134.733331202467,42.9102428956294"
-                    Point2="138.733331202467,42.9102428956294"
-                    Point3="138.733331202467,46.9102428956294" />
-                  <mssgle:LineSegment
-                    End="138.733331202467,64.8999983012677" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Transformacion_Mov_Ventas.Paths[Sort Output1]"
-          TopLeft="612.199991670251,311.599995976687">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-120.133331068357,64.3999984204769"
-              Start="0,0"
-              End="-120.133331068357,56.8999984204769">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.1687795516485" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.1687795516485"
-                    Point2="0,38.1687795516485"
-                    Point3="-4,38.1687795516485" />
-                  <mssgle:LineSegment
-                    End="-116.133331068357,38.1687795516485" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-116.133331068357,38.1687795516485"
-                    Point2="-120.133331068357,38.1687795516485"
-                    Point3="-120.133331068357,42.1687795516485" />
-                  <mssgle:LineSegment
-                    End="-120.133331068357,56.8999984204769" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="153.6,41.6"
-          Id="Package\Transformacion_Mov_Ventas\Conditional Split"
-          TopLeft="389.999994188547,465.999993056059" />
-        <EdgeLayout
-          Id="Package\Transformacion_Mov_Ventas.Paths[Merge Join Output]"
-          TopLeft="469.299994061887,417.599994397164">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.3999986588955"
-              Start="0,0"
-              End="0,40.8999986588955">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.8999986588955" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Transformacion_Mov_Ventas.Paths[Registro_Nuevo]"
-          TopLeft="464.299994508922,507.599993056059">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,75.3999982565639"
-              Start="0,0"
-              End="0,67.8999982565639">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.8999982565639" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-35.24203125,28.257616315782,70.4840625,11.384765625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Transformacion_Mov_Ventas\Origen_Transacciones">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Transformacion_Mov_Ventas\Destio_DIM_Movimiento_Ventas">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Transformacion_Mov_Ventas\Origen_DIM_Moviminto_Ventas">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
